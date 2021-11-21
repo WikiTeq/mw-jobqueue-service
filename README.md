@@ -1,14 +1,14 @@
 # Mediawiki Job Queue Service
 
-The tools automates configuration of MediaWiki runJobs.php maitnenace script runs
+The tool automates configuration of MediaWiki runJobs.php maitnenace script runs
 as a system service on CentOS and Ubuntu OS.
 
 The script setups the following:
 
-* Creates universal /usr/local/bin/mwjobrunner to execute runJobs.php
-* Creates /etc/systemd/system/mw-jobqueue-<WIKI_ID>.service for each wiki
-* Stores logs at /var/log/mediawiki/mwjobrunner.<WIKI_ID>.log
-* Creates /usr/local/bin/rotatelogs-compress.sh helper script to rotate logs
+* Creates universal `/usr/local/bin/mwjobrunner` to execute runJobs.php
+* Creates `/etc/systemd/system/mw-jobqueue-<WIKI_ID>.service` for each wiki
+* Stores logs at `/var/log/mediawiki/mwjobrunner.<WIKI_ID>.log`
+* Creates `/usr/local/bin/rotatelogs-compress.sh` helper script to rotate logs
 
 It's safe to run this script multiple times, once per each wiki you want the service
 to be created for.
